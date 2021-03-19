@@ -57,7 +57,7 @@ router.post('/send', async(req, res) => {
         await transporter.sendMail(mailOptions)
         let new_complaint =await db.collection("complaints").find().toArray()
         client.close()
-        res.json(new_complaint)
+        res.json({message:"otp sent "})
     } catch (error) {
         res.json({
             message:"Someting Went Worng"})

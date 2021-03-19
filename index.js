@@ -40,9 +40,9 @@ let transporter = nodemailer.createTransport({
     
 });
 
-router.get('/'),async(res,req)=>{
+router.get('/',async(res,req)=>{
     res.send("welcome")
-}
+})
 router.post('/send', async(req, res) => {
     try {
         let client = await mongoClient.connect(DB_URL)

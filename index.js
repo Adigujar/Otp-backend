@@ -11,7 +11,7 @@ router.use(cors());
 
 const mongoClient = mongodb.MongoClient;
 const objectId = mongodb.ObjectID;
-const DB_URL = process.env.DBURL || "mongodb://127.0.0.1:27017"
+const DB_URL = process.env.DBURL 
 const Email= process.env.Email
 const Pass= process.env.Pass
 
@@ -35,7 +35,7 @@ let transporter = nodemailer.createTransport({
     
     auth: {
       user: Email,
-      pass: Pass,
+      pass: Pass
     }
     
 });
